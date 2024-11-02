@@ -7,7 +7,7 @@ export const Balance = () => {
     const token = localStorage.getItem("token");
 
     useEffect(() => {
-        axios.post("http://localhost:3000/api/v1/account/balance", {userId: token},{headers: {Authorization: `Bearer ${token}`,}})
+        axios.post("https://paytm-clone-33kc.onrender.com/api/v1/account/balance", {userId: token},{headers: {Authorization: `Bearer ${token}`,}})
         .then(response => {
             setBalance(response.data.balance)
         })
